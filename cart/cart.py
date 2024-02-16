@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from organ.organ import Component
 
 class Cart(Component):

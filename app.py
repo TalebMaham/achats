@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, jsonify, render_template, request
 from main import cart 
 from main import transaction as trans
