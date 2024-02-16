@@ -35,9 +35,9 @@ class Brain(Organ):
             if organ in self.abonements[name]:
                 self.abonements[name].remove(organ)
             else:
-                print(f"{organ} n'est pas abonné à {name}.")
+                print(f"{organ} n est pas abonne a {name}.")
         else:
-            print(f"Aucun abonnement trouvé pour {name}.")
+            print(f"Aucun abonnement trouve pour {name}.")
 
 
 

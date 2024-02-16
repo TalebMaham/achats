@@ -23,7 +23,7 @@ class Machine(Component):
 
         if etat["name"] == "transaction" : 
             if  "machine_action" in etat : 
-                        print(f"Machine reçoit : {etat["machine_action"]}")
+                        print(f"Machine recoit : {etat["machine_action"]}")
     
             
     def set_brain(self, cerveau):
