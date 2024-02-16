@@ -1,14 +1,11 @@
 
 from brain.brain import Brain
 from cart.cart import Cart
-from customer.customer import Customer
-from devices.money_acceptor import Monnayeur
-from logger.logger import Logger
+
 from machines.machine import Machine
 from payement_gateway.payment_gateway import PaymentGateway
 from rabbitmq_queue.rabbitmq_queue import RabbitmqQueue
 from stock.stock import Stock
-from ticket_printer.ticket_printer import TicketPrinter
 from transaction.transaction import Transaction
 
 
