@@ -39,7 +39,7 @@ class Transaction(Component):
                 else :
                     self.etat["erreurs"] = "Error : type de payment inconnu"
                     self.etat["result"] = "Transaction not accepted"
-                    self.etat["cart"] = f"{self.etat["erreurs"]} {self.etat["result"]}"
+                    self.etat["cart"] = f"{{self.etat['erreurs']}} {{self.etat['result']}}"
             else :
                 self.etat["erreurs"] = "Error : type de payment non precisé"
                 self.etat["result"] = "Transaction not accepted"
