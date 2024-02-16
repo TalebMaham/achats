@@ -30,14 +30,7 @@ class Brain(Organ):
         else : 
             self.abonements[name] = [organ]
 
-    def unsubscribe(self, organ, name):
-        if name in self.abonements:
-            if organ in self.abonements[name]:
-                self.abonements[name].remove(organ)
-            else:
-                print(f"{organ} n est pas abonne a {name}.")
-        else:
-            print(f"Aucun abonnement trouve pour {name}.")
+
 
 
 
