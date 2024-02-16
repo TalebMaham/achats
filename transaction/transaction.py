@@ -53,7 +53,7 @@ class Transaction(Component):
             if etat['isAccepted'] : 
                 self.etat["result"] = "Transaction accepted"
                 self.etat["stock_decrement"] =  self.etat_cart["products"]
-                self.etat["machine_action"] =  f"dispensation des produits {self.etat_cart["products"]}"
+                self.etat["machine_action"] =  f"dispensation des produits {self.etat_cart['products']}"
             else : 
                 self.etat["result"] = "Transaction not accepted"
             self.etat["cart"] = "ready"
