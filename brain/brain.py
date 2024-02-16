@@ -31,13 +31,6 @@ class Brain(Organ):
             self.abonements[name] = [organ]
 
     def unsubscribe(self, organ, name):
-        """
-        Méthode pour se désabonner.
-
-        Args:
-            organ: Organisme à désabonner.
-            name: Nom de l'abonnement à annuler.
-        """
         if name in self.abonements:
             if organ in self.abonements[name]:
                 self.abonements[name].remove(organ)

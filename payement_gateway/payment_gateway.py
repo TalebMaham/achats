@@ -7,7 +7,7 @@ class PaymentGateway(Component):
         self.etat = {"name" : "payment_gateway"}
 
     def operation(self):
-        # Implémentation spécifique de l'opération pour une transaction
+
         pass
 
     def start(self) : 
@@ -15,19 +15,11 @@ class PaymentGateway(Component):
 
 
     def send(self):
-        """
-        Méthode pour envoyer l'état de la transaction au cerveau.
-        """
-
+     
         self.brain.receive(self.etat, "payment_gateway")
 
     def receive(self, etat, name):
-        """
-        Méthode pour recevoir l'état d'un autre organe.
-
-        Args:
-            etat: Dictionnaire contenant l'état de l'organe émetteur.
-        """
+       
     
         if "payment_gateway" in  etat :
             if etat["payment_gateway"] == "in_progress" : 

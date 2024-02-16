@@ -29,7 +29,7 @@ class Stock(Component):
 
 
     def operation(self):
-        # Implémentation spécifique de l'opération pour une transaction
+      
         pass
 
     def start(self) : 
@@ -37,19 +37,12 @@ class Stock(Component):
 
         
     def send(self):
-        """
-        Méthode pour envoyer l'état de la transaction au cerveau.
-        """
+        
 
         self.brain.receive(self.etat, "Stock")
 
     def receive(self, etat, name):
-        """
-        Méthode pour recevoir l'état d'un autre organe.
-
-        Args:
-            etat: Dictionnaire contenant l'état de l'organe émetteur.
-        """
+ 
         if etat["name"] == "transaction" : 
             if "stock_decrement" in etat : 
                 self.decrement(etat["stock_decrement"])

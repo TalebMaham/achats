@@ -5,9 +5,9 @@ from organ.organ import Component
 class Transaction(Component):
     def __init__(self):
         self.brain = None
-        self.amount = 50  # Montant de la transaction
+        self.amount = 50 
 
-        self.date = None  # Date de la transaction
+        self.date = None  
         self.etat = {"name": "transaction"}
         self.etat_cart = {}
 
@@ -19,21 +19,14 @@ class Transaction(Component):
         pass
 
     def send(self):
-        """
-        Méthode pour envoyer l'état de la transaction au cerveau.
-        """
-        self.date = datetime.now()  # Mettre à jour la date
-        self.etat["date"] = self.date.strftime("%Y-%m-%d %H:%M:%S")  # Ajouter la date à l'état
+
+        self.date = datetime.now()  
+        self.etat["date"] = self.date.strftime("%Y-%m-%d %H:%M:%S") 
         self.brain.receive(self.etat, "transaction")
 
   
     def receive(self, etat, name):
-        """
-        Méthode pour recevoir l'état d'un autre organe.
-
-        Args:
-            etat: Dictionnaire contenant l'état de l'organe émetteur.
-        """
+      
         if etat["name"] == "cart":
             self.etat["amount"] = etat["total"]
             self.etat["cart"] = "in_progress"

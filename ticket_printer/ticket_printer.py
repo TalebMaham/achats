@@ -11,27 +11,16 @@ class TicketPrinter(Component):
         self.brain.subscribe(self, "Transaction")
 
     def operation(self):
-        # Implémentation spécifique de l'opération pour une transaction
+       
         pass
 
 
     def send(self):
-        """
-        Méthode pour envoyer l'état de la transaction au cerveau.
-        """
-        etat = {
-            "name": "TicketPrinter",
-            # Ajoutez d'autres attributs spécifiques de la transaction
-        }
-        self.brain.receive(etat, "TicketPrinter")
+  
+        self.brain.receive(self.etat, "TicketPrinter")
 
     def receive(self, etat, name):
-        """
-        Méthode pour recevoir l'état d'un autre organe.
-
-        Args:
-            etat: Dictionnaire contenant l'état de l'organe émetteur.
-        """
+    
         if "ticket" in etat : 
                 if etat["ticket"]["new"] : 
                     if etat["name"] == "Transaction" : 
