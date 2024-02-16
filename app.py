@@ -40,7 +40,7 @@ def add_to_cart():
 @app.route('/rabbitmq')
 def rabbitmq():
     return rabbit.get()
-    # return render_template('cart.html', rabbit = rabbit.get())
+   
 
 
 

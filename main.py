@@ -1,7 +1,4 @@
 
-
-
-# Création des organes
 from brain.brain import Brain
 from cart.cart import Cart
 from customer.customer import Customer
